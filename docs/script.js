@@ -43,20 +43,16 @@ class App {
 	}
 
 	convert() {
-		console.log(this.particles.length)
-
 		if (this.particles.length) {
 			this.particles = []
 		}
-
-		console.log(this.particles.length)
 
 		label.style.display = 'block'
 		convertBtn.style.display = 'none'
 
 		const { data, width, height } = ctx.getImageData(
 			canvas.width / 2 - this.image.width / 2,
-			canvas.height / 2 - this.image.height / 2,
+			0,
 			this.image.width,
 			this.image.height
 		)
@@ -119,7 +115,6 @@ class App {
 	}
 
 	animate() {
-		console.log('animate');
 		this.animationId = requestAnimationFrame(this.animate.bind(this))
 		this.update()
 	}
