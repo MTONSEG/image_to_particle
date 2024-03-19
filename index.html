@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: #000;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			min-height: calc(100vh - 50px);
+			color: white;
+			font-size: 50px;
+			gap: 50px;
+			padding: 20px 0;
+		}
+
+		#file {
+			position: absolute;
+			opacity: 0;
+			z-index: -1;
+		}
+
+		label {
+			cursor: pointer;
+		}
+
+		#convert-btn {
+			display: none;
+			cursor: pointer;
+			
+		}
+
+	</style>
+	<body>
+		<label>
+			<p>Choose</p>
+			<input id="file" type="file" accept=".jpeg, .jpg" />
+		</label>
+
+		<p id="convert-btn">Convert</p>
+
+		<canvas id="canvas"></canvas>
+		<script src="script.js" type="module"></script>
+	</body>
+</html>
